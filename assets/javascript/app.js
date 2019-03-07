@@ -17,8 +17,8 @@ function renderAnime() {
 //Function to display anime 
 function displayAnime() {
 
-  var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=jenni&page=1";
+  // var search_anime = $(this).attr("name");
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&page=1";
   console.log(queryURL)
 
   // Ajax call to API
