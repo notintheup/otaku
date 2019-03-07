@@ -1,1 +1,1 @@
-# otaku
+# project_1: Otaku
