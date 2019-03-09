@@ -1,6 +1,6 @@
 // Otaku javascript starts now
-var topics = ["tree"];
-
+var topics = ["code"];
+// console.log(topics);
 //Function to render anime cards
 function renderAnime() {
   $(".table-view").empty();
@@ -19,7 +19,7 @@ function displayAnime() {
 
   // var search_anime = $(this).attr("name");
   var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=4";
-  console.log(queryURL)
+  // console.log(queryURL)
 
   // Ajax call to API
   $.ajax({
@@ -29,7 +29,7 @@ function displayAnime() {
   .done(function (response) {
 
     for (var i = 0; i < response.results.length; i++) {
-      // console.log(response.results[i])
+      console.log(response.results[i])
       var animeURL = response.results[i].image_url;
       var table = $("<table>");
       var animeDiv = $("<td class= row>");
@@ -43,7 +43,8 @@ function displayAnime() {
       animeDiv.append(newImg);
       var ratings = $("<p>").text("rated: " + response.results[i].rated);
       var title = $("<p>").text("Title: " + response.results[i].title);
-      animeDiv.append(title, ratings);
+      var synopsis = $("<p>").text("Synopsis: " + response.results[i].synopsis);
+      animeDiv.append(title, ratings, synopsis);
       $("#anime-view").append(animeDiv);
 
     }
@@ -54,7 +55,7 @@ $("#search-otaku").on("click", function (event) {
   event.preventDefault();
   var lookup = $("#lookup-value").val().trim();
   topics.push(lookup);
-  console.log(lookup);
-
+  // console.log(lookup);
+  displayAnime();
 })
 displayAnime();
