@@ -1,13 +1,10 @@
 .container {
   margin: 10px auto;
-  border: 2px solid #403fd3;
   border-radius: 10px;
   height: 100px;
   width: 100%;
   text-align: center;
   font-family: 'Righteous', cursive;
-  color: rgb(42, 220, 226);
-  background-color: blueviolet;
 
 }
 
