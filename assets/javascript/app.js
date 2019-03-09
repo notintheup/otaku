@@ -1,5 +1,5 @@
 // Otaku javascript starts now
-var topics = ["sara", "tom", "jenni", "george"];
+var topics = ["tree"];
 
 //Function to render anime cards
 function renderAnime() {
@@ -18,23 +18,35 @@ function renderAnime() {
 function displayAnime() {
 
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&page=1";
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=4";
   console.log(queryURL)
 
   // Ajax call to API
   $.ajax({
-    type: "GET",
     url: queryURL,
-    // dataType: "JSON",
-    // contentType: "application/json",
-    success: function (search_anime) {
-      console.log("MSG: " + search_anime);
+    method: "GET"
+  })
+  .done(function (response) {
 
-    },
-    error: function () {
-      alert("ERROR!!");
+    for (var i = 0; i < response.results.length; i++) {
+      // console.log(response.results[i])
+      var animeURL = response.results[i].image_url;
+      var table = $("<table>");
+      var animeDiv = $("<td class= row>");
+      var newImg = $("<img>");
+      newImg.attr("src", animeURL);
+      newImg.attr("rated", response.results[i].rated)
+      newImg.attr("title", response.results[i].title)
+      newImg.attr("synopsis", response.results[i].synopsis)
+      newImg.addClass("image");
+      table.append(animeDiv);
+      animeDiv.append(newImg);
+      var ratings = $("<p>").text("rated: " + response.results[i].rated);
+      var title = $("<p>").text("Title: " + response.results[i].title);
+      animeDiv.append(title, ratings);
+      $("#anime-view").append(animeDiv);
+
     }
-
   })
 }
 //Click handlers start now
