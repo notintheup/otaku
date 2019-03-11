@@ -38,13 +38,15 @@ function displayAnime() {
       newImg.attr("rated", response.results[i].rated)
       newImg.attr("title", response.results[i].title)
       newImg.attr("synopsis", response.results[i].synopsis)
+      newImg.attr("url", response.results[i].url)
       newImg.addClass("image");
       table.append(animeDiv);
       animeDiv.append(newImg);
-      var ratings = $("<p>").text("rated: " + response.results[i].rated);
-      var title = $("<p>").text("Title: " + response.results[i].title);
+      var title = $("<h2>").text("Title: " + response.results[i].title);
+      var ratings = $("<h3>").text("rated: " + response.results[i].rated);
       var synopsis = $("<p>").text("Synopsis: " + response.results[i].synopsis);
-      animeDiv.append(title, ratings, synopsis);
+      var url = $("<a href>").text(response.results[i].url);
+      animeDiv.append(title, [ratings, synopsis, url]);
       $("#anime-view").append(animeDiv);
 
     }
@@ -58,4 +60,7 @@ $("#search-otaku").on("click", function (event) {
   // console.log(lookup);
   displayAnime();
 })
+// Handler of animation
+// $(document).on("click", ".image", detailsAnime);
+
 displayAnime();
