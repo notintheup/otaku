@@ -35,7 +35,7 @@ body {
 
 .card-img-top {
   border-radius: 5px;
-  float: left;
+  /* float: left; */
   margin-right: 10px;
   clear: both;
   padding-bottom: 5px;

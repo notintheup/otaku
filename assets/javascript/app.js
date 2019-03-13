@@ -1,5 +1,5 @@
 // Otaku javascript starts now
-var topics = ["tiger"];
+var topics = ["turtle"];
 //Function to display anime 
 function displayAnime() {
 
