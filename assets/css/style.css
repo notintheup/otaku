@@ -7,9 +7,7 @@
   font-family: 'Righteous', cursive;
 
 }
-img {
-  float: left;
-}
+
 h1 {
   font-size: 64px;
   padding-bottom: 20px;
@@ -35,18 +33,42 @@ body {
   border-radius: 10px;
   width: 100%;
   font-family: 'Righteous', cursive;
+  display: block;
+  overflow: hidden;
+
+}
+
+.content {
+  float: left;
+  width: 70%;
+  height: 100%;
 }
 
 img {
   border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+  clear: both;
+
 
 }
 
+.text-format {}
+
+.imagebox {
+  overflow: hidden;
+  width: 30%;
+  float: left;
+}
+
+
 p {
-  float: right;
-  /* padding-left: 10px; */
+  padding-left: 20px;
   color: whitesmoke;
   font-size: 20px;
+  margin-left: 0px;
+  overflow: auto;
+  display: block;
 }
 
 .button-view {

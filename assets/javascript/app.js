@@ -20,7 +20,7 @@ var topics = ["code"];
 function displayAnime() {
 
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=10";
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=5";
   // console.log(queryURL)
   $("#anime-view").empty();
   // Ajax call to API
@@ -32,6 +32,8 @@ function displayAnime() {
 
       for (var i = 0; i < response.results.length; i++) {
         if (response.results[i].rated !== 'R'){
+        console.log(response.results[i]);
+        console.log(response.results[i].synopsis);
         var animeURL = response.results[i].image_url;
         var table = $("<table id=table>");
         var animeDiv = $("<td class = row >");
@@ -51,7 +53,7 @@ function displayAnime() {
         var synopsis = $("<p class= text-format>").text("Synopsis:  " + response.results[i].synopsis);
         imageDiv.append(newImg);
         contentDiv.append(title, ratings, synopsis);
-        animeDiv.append(imageDiv, contentDiv); 
+        animeDiv.append(imageDiv, contentDiv);
         $("#anime-view").append(animeDiv);
 
       }
@@ -64,6 +66,8 @@ $("#search-otaku").on("click", function (event) {
   var lookup = $("#lookup-value").val().trim();
   topics = lookup;
   // topics.push(lookup);
+  // console.log(lookup);
   displayAnime();
+  //renderAnime();
 })
 displayAnime();
