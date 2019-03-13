@@ -32,8 +32,6 @@ function displayAnime() {
 
       for (var i = 0; i < response.results.length; i++) {
         if (response.results[i].rated !== 'R'){
-        console.log(response.results[i]);
-        console.log(response.results[i].synopsis);
         var animeURL = response.results[i].image_url;
         var table = $("<table id=table>");
         var animeDiv = $("<td class = row >");
