@@ -1,21 +1,6 @@
 // Otaku javascript starts now
 var topics = ["code"];
 // console.log(topics);
-//Function to render anime cards
-
-/** function renderAnime() {
-  var tb = $("#table");
-  $("#anime-view").empty();
-  for (var i = 0; i < topics.length; i++) {
-    var a = $("<td>");
-    a.addClass("auto-td");
-    a.attr("otaku-name", topics[i]);
-    a.text(topics[i]);
-    $(".table-view").append(a);
-    $("#lookup-value").empty();
-  }
-}
-*/
 //Function to display anime 
 function displayAnime() {
 
@@ -45,7 +30,6 @@ function displayAnime() {
         newImg.attr("synopsis", response.results[i].synopsis);
         newImg.addClass("image");
         table.append(animeDiv);
-        // animeDiv.append(newImg);
 
         var ratings = $("<p class= text-format>").text("Rating: " + response.results[i].rated);
         var title = $("<p class= text-format>").text("Title:  " + response.results[i].title);
@@ -66,6 +50,5 @@ $("#search-otaku").on("click", function (event) {
   // topics.push(lookup);
   // console.log(lookup);
   displayAnime();
-  //renderAnime();
 })
 displayAnime();
