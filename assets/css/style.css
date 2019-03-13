@@ -1,9 +1,9 @@
 .container {
-  margin: 10px auto;
+  margin: 5px auto;
   border-radius: 10px;
   height: 100px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-family: 'Righteous', cursive;
 
 }
@@ -25,57 +25,31 @@ body {
   background-size: cover;
   font-family: 'Righteous', cursive;
 }
-
-.row {
-  margin: 10px;
-  background-color: rgba(74, 143, 255, 0.534);
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%;
-  font-family: 'Righteous', cursive;
-  display: block;
-  overflow: hidden;
-
+.card {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card-body {
+  width: 230px;
 }
 
-.content {
-  float: left;
-  width: 70%;
-  height: 100%;
-}
-
-img {
+.card-img-top {
   border-radius: 5px;
   float: left;
   margin-right: 10px;
   clear: both;
+  padding-bottom: 5px;
+  width: 200px;
 
 
 }
 
-.text-format {}
-
-.imagebox {
-  overflow: hidden;
-  width: 30%;
-  float: left;
-}
-
-
-p {
-  padding-left: 20px;
-  color: whitesmoke;
-  font-size: 20px;
-  margin-left: 0px;
-  overflow: auto;
-  display: block;
+.text-format {
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .button-view {
-  padding-bottom: 15px;
-}
-
-#anime-form {
   padding-bottom: 15px;
 }
 
