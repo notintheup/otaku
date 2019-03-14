@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -32,28 +31,38 @@
             </div>
         </div>
     </nav>
-
     <!-- Page Content -->
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-                <div class="row text-center" id="anime-view"></div>
+    <div class="row">
+        <div class="side">
+            <div class="container-fluid">
+            <h2>WiKi Anime</h2>
+            <div class="card">
+                <div id="search">
+                    <input id="searchid" class="input-lg" name="gsrsearch" type="text" placeholder="search Wiki"
+                        autocomplete="off" />
+                        <div>
+                    <button id="searchWiki" class="btn-lg btn-alert">Search</button>
+                    <button id="clearSearch" class="btn-lg btn-alert">Clear</button>
+                    </div>
+                    <div id="results" class="container-fluid"></div>
 
-        </div>
-
-        <!-- Results Here -->
-        <div class="headline">
-                Widget, Inc.
+                </div>
             </div>
-        
-            <script>
-                ScrollReveal().reveal('.container');
-            </script>
+        </div>
+        </div>
+        <div class="main">
+            <h2>SAFE ANIME</h2>
+            <div class="row text-center" id="anime-view"></div>
+        </div>
+        <div class="row">
+            <div class="side">
+            </div>
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!-- jQuery -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Script -->
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
+            <!-- Script -->
+            <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
 </body>

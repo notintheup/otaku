@@ -3,7 +3,7 @@ var topics = ["otaku"];
 //Function to display anime 
 function displayAnime() {
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=10";
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=20";
   $("#anime-view").empty();
   // Ajax call to API
   $.ajax({
@@ -38,6 +38,26 @@ function displayAnime() {
       }
     });
 }
+
+//Wikipedia search button
+$("#searchWiki").click(function () {
+  var q = document.getElementById("searchid").value;
+  $('#results').html('');
+  $.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&gsrlimit=10&generator=search&origin=*&gsrsearch=" + q, function (data) {
+    $('#results').append('<p>Top Wiki Search Results for "' + q + '"</p>');
+    $.each(data.query.pages, function (i) {
+      $('#results').append("<p><a href='https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid +
+        "' target='_blank'>" + data.query.pages[i].title + "</a></p>");
+    });
+
+   });
+});
+
+ $("#clearSearch").click(function () {
+  document.getElementById("searchid").value = "";
+  document.getElementById("results").innerHTML = "";
+});
+
 //Click handlers start now
 $("#search-otaku").on("click", function (event) {
   event.preventDefault();
