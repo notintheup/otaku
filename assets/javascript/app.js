@@ -3,7 +3,7 @@ var topics = ["otaku"];
 //Function to display anime 
 function displayAnime() {
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=20";
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=10";
   $("#anime-view").empty();
   // Ajax call to API
   $.ajax({
@@ -44,6 +44,7 @@ $("#search-otaku").on("click", function (event) {
   var lookup = $("#lookup-value").val().trim();
   topics = lookup;
   displayAnime();
+  $("#lookup-value").val("");
 })
 $(".img").on("click", function (event) {
   event - preventDefault();
