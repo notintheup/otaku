@@ -3,7 +3,7 @@ var topics = ["baby"];
 //Function to display anime 
 function displayAnime() {
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=18";
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=20";
   $("#anime-view").empty();
   // Ajax call to API
   $.ajax({
