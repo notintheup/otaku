@@ -1,11 +1,9 @@
 // Otaku javascript starts now
-var topics = ["turtle"];
+var topics = ["baby"];
 //Function to display anime 
 function displayAnime() {
-
   // var search_anime = $(this).attr("name");
-  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=8";
-  // console.log(queryURL)
+  var queryURL = "https://api.jikan.moe/v3/search/anime?q=" + topics + "&limit=18";
   $("#anime-view").empty();
   // Ajax call to API
   $.ajax({
@@ -15,8 +13,8 @@ function displayAnime() {
     .done(function (response) {
 
       for (var i = 0; i < response.results.length; i++) {
-        console.log(response.results[i]);
-        if (response.results[i].rated !== 'R') {
+        // console.log(response.results[i]);
+        if (response.results[i].rated !== (['R+', 'R'])) {
           var animeURL = response.results[i].image_url;
           var table = $("<table id=table>");
           var animeDiv = $("<td class=card>");
@@ -32,6 +30,7 @@ function displayAnime() {
           var ratings = $("<p class= text-format>").text("Rating: " + response.results[i].rated);
           var title = $("<p class= text-format>").text("Title:  " + response.results[i].title);
           var synopsis = $("<p class= text-format>").text("Synopsis:  " + response.results[i].synopsis);
+        
           imageDiv.append(newImg, title, ratings, synopsis);
           animeDiv.append(imageDiv, contentDiv);
           $("#anime-view").append(animeDiv);
@@ -51,3 +50,4 @@ $(".img").on("click", function (event) {
 
 })
 displayAnime();
+

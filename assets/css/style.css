@@ -1,57 +1,39 @@
-.container {
-  margin: 5px auto;
-  border-radius: 10px;
-  height: 100px;
-  width: 100%;
-  text-align: left;
-  font-family: 'Righteous', cursive;
-
-}
-
-h1 {
-  font-size: 64px;
-  padding-bottom: 20px;
-}
-
-h2 {
+.navbar {
+ padding-bottom: 10px;
+ }
+  h2 {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 15px;
   font-family: 'Righteous', cursive;
 }
-
-body {
-  background-image: url("../images/turn-pen-976930_1280.jpg");
-  background-size: cover;
-  font-family: 'Righteous', cursive;
+#anime-view{ 
+margin-right: auto;
+margin-left: auto;
 }
 .card {
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .card-body {
-  width: 230px;
+  width: 250px;
 }
 
 .card-img-top {
   border-radius: 5px;
-  /* float: left; */
   margin-right: 10px;
   clear: both;
   padding-bottom: 5px;
-  width: 200px;
-
+  width: 220px;
 
 }
 
 .text-format {
-  font-size: 10px;
+  font-size: 12px;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.button-view {
-  padding-bottom: 15px;
-}
 
 .footer {
   position: fixed;
