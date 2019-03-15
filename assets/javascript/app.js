@@ -13,7 +13,7 @@ function displayAnime() {
     .done(function (response) {
 
       for (var i = 0; i < response.results.length; i++) {
-        // console.log(response.results[i]);
+        console.log(response.results[i]);
         if (response.results[i].rated == 'PG-13') {
           var animeURL = response.results[i].image_url;
           var table = $("<table id=table>");
