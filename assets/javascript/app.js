@@ -16,6 +16,9 @@ function displayAnime() {
         console.log(response.results[i]);
         if (response.results[i].rated == 'PG-13') {
           var animeURL = response.results[i].image_url;
+          var url = response.results[i].url;
+          var linkContainer = $("<a>");
+          linkContainer.attr("href", url);
           var table = $("<table id=table>");
           var animeDiv = $("<td class=card>");
           var imageDiv = $("<div class = card-body>");
@@ -30,10 +33,11 @@ function displayAnime() {
           var ratings = $("<p class= text-format>").text("Rating: " + response.results[i].rated);
           var title = $("<p class= text-format>").text("Title:  " + response.results[i].title);
           var synopsis = $("<p class= text-format>").text("Synopsis:  " + response.results[i].synopsis);
-        
+
           imageDiv.append(newImg, title, ratings, synopsis);
           animeDiv.append(imageDiv, contentDiv);
-          $("#anime-view").append(animeDiv);
+          linkContainer.append(animeDiv);
+          $("#anime-view").append(linkContainer);
         }
       }
     });
@@ -50,10 +54,10 @@ $("#searchWiki").click(function () {
         "' target='_blank'>" + data.query.pages[i].title + "</a></p>");
     });
 
-   });
+  });
 });
 
- $("#clearSearch").click(function () {
+$("#clearSearch").click(function () {
   document.getElementById("searchid").value = "";
   document.getElementById("results").innerHTML = "";
 });
@@ -65,10 +69,8 @@ $("#search-otaku").on("click", function (event) {
   topics = lookup;
   displayAnime();
   $("#lookup-value").val("");
-})
+});
 $(".img").on("click", function (event) {
   event - preventDefault();
-
-})
+});
 displayAnime();
-

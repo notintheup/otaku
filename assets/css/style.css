@@ -1,25 +1,29 @@
 .navbar {
- padding-bottom: 10px;
- overflow: hidden;
- background-color: rgba(51, 51, 51, 0.637);
- position: sticky;
- top: 0;
+  padding-bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.637);
+  position: sticky;
+  top: 0;
 
- }
- .container {
-   background-color: rgba(102, 51, 153, 0.52);
+}
 
- }
-  h2 {
+.container {
+  background-color: rgba(124, 81, 167, 0.52);
+
+}
+
+h2 {
   /* padding-left: 10px; */
   padding-right: 10px;
   padding-bottom: 15px;
   font-family: 'Righteous', cursive;
 }
-#anime-view{ 
-margin-right: auto;
-margin-left: auto;
+
+#anime-view {
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .card {
   margin-left: 5px;
   margin-right: 5px;
@@ -48,17 +52,21 @@ margin-left: auto;
 * {
   box-sizing: border-box;
 }
+
 #search {
-  width: 300px; 
+  width: 300px;
 }
+
 .input-lg {
   width: 100%;
   padding: 5px;
 }
+
 .btn-lg {
   padding: 2px;
   margin-top: 5px;
 }
+
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -107,24 +115,24 @@ body {
 }
 
 /* Column container */
-.row {  
-  display: -ms-flexbox; 
+.row {
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; 
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 /* Sidebar/left column */
 .side {
-  -ms-flex: 20%; 
+  -ms-flex: 20%;
   flex: 20%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
-.main {   
-  -ms-flex: 80%; 
+.main {
+  -ms-flex: 80%;
   flex: 80%;
   background-color: white;
   padding: 20px;
@@ -132,7 +140,7 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
