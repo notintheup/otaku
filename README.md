@@ -1,6 +1,12 @@
 # project_1: Name: Otaku
 
-* Project requirements: 
+o·ta·ku
+/ōˈtäko͞o/Submit
+noun
+(in Japan) a young person who is obsessed with computers or particular aspects of popular culture to the detriment of their social skills.
+"every other otaku can run on about their hobby endlessly"
+
+* Project requirements:
 * Project goal - to build something awesome with the following expectations:
     Must use at least 2 APIs
     Must use AJAX to pull data
@@ -13,5 +19,11 @@
     Must use Bootstrap or Alternative CSS Framework
     Must have user input validation
     Must use separate javascript, css, and html files
-
+**/Project Objectives
+  *-* Anime search engine
+  *-* Age appropriate results
+  *-* Clean and functional design
+*** Features
+    *Bootstrap
+    *JQuery
 

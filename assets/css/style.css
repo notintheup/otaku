@@ -1,11 +1,9 @@
 .navbar {
-  padding-bottom: 10px;
   overflow: hidden;
   background-color: rgba(51, 51, 51, 0.637);
   position: sticky;
   top: 0;
   font-family: 'Righteous', cursive;
-
 }
 
 h2 {
@@ -66,15 +64,10 @@ body {
   margin: 0;
   background-color: #000000;
   padding: 0px;
+  /* padding-top: 10px; */
   margin: 0px;
 }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
@@ -84,25 +77,20 @@ body {
   text-decoration: none;
 }
 
-
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Active/current link */
 .navbar a.active {
   background-color: #666;
   color: white;
 }
 
-/* Column container */
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +98,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Sidebar/left column */
 .side {
   -ms-flex: 20%;
   flex: 20%;
@@ -118,7 +105,6 @@ body {
   padding: 20px;
 }
 
-/* Main column */
 .main {
   -ms-flex: 80%;
   flex: 80%;
