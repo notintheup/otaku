@@ -22,8 +22,9 @@ noun
 **/Project Objectives
   *-* Anime search engine
   *-* Age appropriate results
-  *-* Clean and functional design
+  *-* Clean, responsive and functional design
 *** Features
     *Bootstrap
     *JQuery
+    *AWS EC2
 
